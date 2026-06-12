@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    Blackjack Academy 2.0
+</title>
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+</head>
+
+<body>
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="chip-spin">
+            🎰
+        </div>
+
+        <h1>
+            BLACKJACK ACADEMY
+        </h1>
+
+        <p>
+            Luxury Casino Experience
+        </p>
+
+    </div>
+
+</div>
+
+<header class="top-bar">
+
+    <div class="logo">
+        🎰 BLACKJACK ACADEMY
+    </div>
+
+    <div class="player-bank">
+
+        <div class="coin-box">
+
+            🪙 Purush Coins
+
+            <span id="coin-balance">
+                10000
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main class="casino-table">
+
+    <section class="dealer-area">
+
+        <h2>
+            Dealer
+        </h2>
+
+        <div id="dealer-cards"
+             class="cards-container"></div>
+
+        <div id="dealer-score"
+             class="score-box">
+
+            Score: ?
+
+        </div>
+
+    </section>
+
+    <section class="center-panel">
+
+        <div id="result-message">
+
+            Place Your Bets
+
+        </div>
+
+        <div id="floating-win"></div>
+
+    </section>
+
+    <section class="player-area">
+
+        <h2>
+            Player
+        </h2>
+
+        <div id="player-cards"
+             class="cards-container"></div>
+
+        <div id="player-score"
+             class="score-box">
+
+            Score: 0
+
+        </div>
+
+    </section>
+
+    <section class="betting-zone">
+
+        <h3>
+            Current Bet
+        </h3>
+
+        <div id="bet-display"
+             class="bet-display">
+
+            500 PC
+
+        </div>
+
+        <div class="chip-row">
+
+            <button id="bet100"
+                    class="chip green-chip">
+
+                100
+
+            </button>
+
+            <button id="bet500"
+                    class="chip blue-chip">
+
+                500
+
+            </button>
+
+            <button id="bet1000"
+                    class="chip purple-chip">
+
+                1000
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="action-buttons">
+
+        <button id="deal-btn">
+
+            DEAL
+
+        </button>
+
+        <button id="hit-btn">
+
+            HIT
+
+        </button>
+
+        <button id="stand-btn">
+
+            STAND
+
+        </button>
+
+        <button id="double-btn">
+
+            DOUBLE
+
+        </button>
+
+    </section>
+
+    <section class="secondary-buttons">
+
+        <button id="reset-bet-btn">
+
+            RESET BET
+
+        </button>
+
+        <button id="max-bet-btn">
+
+            ALL IN
+
+        </button>
+
+    </section>
+
+</main>
+
+<section class="stats-panel">
+
+    <h2>
+        Career Statistics
+    </h2>
+
+    <div class="stats-grid">
+
+        <div>
+
+            Games
+
+            <span id="games-played">
+                0
+            </span>
+
+        </div>
+
+        <div>
+
+            Wins
+
+            <span id="wins">
+                0
+            </span>
+
+        </div>
+
+        <div>
+
+            Losses
+
+            <span id="losses">
+                0
+            </span>
+
+        </div>
+
+        <div>
+
+            Blackjacks
+
+            <span id="blackjacks">
+                0
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer-nav">
+
+    <button id="play-page">
+
+        Play
+
+    </button>
+
+    <button id="learn-page">
+
+        Learn Mode
+
+    </button>
+
+    <button id="shop-page">
+
+        Shop
+
+    </button>
+
+    <button id="profile-page">
+
+        Profile
+
+    </button>
+
+</footer>
+
+<script src="js/game.js"></script>
+
+</body>
+
+</html>

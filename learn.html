@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    Blackjack Academy - Learn Mode
+</title>
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+</head>
+
+<body>
+
+
+<header class="top-bar">
+
+    <div class="logo">
+
+        📚 BLACKJACK ACADEMY
+        - LEARN MODE
+
+    </div>
+
+    <div class="coin-box">
+
+        🎓 Strategy Trainer
+
+    </div>
+
+</header>
+
+<main class="casino-table">
+
+    <section class="dealer-area">
+
+        <h2>
+            Dealer
+        </h2>
+
+        <div id="dealer-cards"
+             class="cards-container"></div>
+
+        <div id="dealer-score"
+             class="score-box">
+
+            Score: ?
+
+        </div>
+
+    </section>
+
+    <section class="center-panel">
+
+        <div id="result-message">
+
+            Press DEAL To Start Learning
+
+        </div>
+
+    </section>
+
+    <section class="player-area">
+
+        <h2>
+            Player
+        </h2>
+
+        <div id="player-cards"
+             class="cards-container"></div>
+
+        <div id="player-score"
+             class="score-box">
+
+            Score: 0
+
+        </div>
+
+    </section>
+
+    <section class="action-buttons">
+
+        <button id="deal-btn">
+
+            DEAL
+
+        </button>
+
+        <button id="hit-btn">
+
+            HIT
+
+        </button>
+
+        <button id="stand-btn">
+
+            STAND
+
+        </button>
+
+    </section>
+
+    <section class="coach-panel">
+
+        <h2>
+
+            🎓 Strategy Coach
+
+        </h2>
+
+        <div id="coach-feedback">
+
+            Deal a hand to begin learning.
+
+        </div>
+
+    </section>
+
+    <br>
+
+    <a href="index.html">
+
+        <button>
+
+            Return To Casino
+
+        </button>
+
+    </a>
+
+</main>
+
+
+<div id="tutorial-overlay">
+
+
+<div class="tutorial-box">
+
+    <h1>
+        🎓 Welcome to Blackjack Academy
+    </h1>
+
+    <p>
+        Goal: Beat the dealer without
+        going over 21.
+    </p>
+
+    <p>
+        Cards 2-10 = Face Value
+    </p>
+
+    <p>
+        J, Q, K = 10
+    </p>
+
+    <p>
+        A = 1 or 11
+    </p>
+
+    <p>
+        Dealer must hit until 17.
+    </p>
+
+    <p>
+        Try to follow the coach's
+        recommendations.
+    </p>
+
+    <button id="start-learning-btn">
+
+        Start Learning
+
+    </button>
+
+</div>
+
+</div>
+
+<script src="js/learn.js"></script>
+
+
+</body>
+
+
+</html>

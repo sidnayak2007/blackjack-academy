@@ -1,0 +1,979 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+
+
+font-family:
+    "Segoe UI",
+    sans-serif;
+
+min-height: 100vh;
+
+color: white;
+
+background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("../images/vegas-bg.jpeg");
+
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+
+display: flex;
+flex-direction: column;
+
+
+}
+
+/* ==========================
+LOADER
+========================== */
+
+#loader {
+
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+background: #000;
+
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+z-index: 99999;
+
+
+}
+
+.loader-content {
+
+
+text-align: center;
+
+
+}
+
+.loader-content h1 {
+
+
+color: gold;
+
+font-size: 3rem;
+
+letter-spacing: 4px;
+
+margin-top: 20px;
+
+
+}
+
+.loader-content p {
+
+
+color: white;
+
+margin-top: 10px;
+
+
+}
+
+.chip-spin {
+
+
+font-size: 6rem;
+
+animation:
+    spin 2s linear infinite;
+
+
+}
+
+@keyframes spin {
+
+
+100% {
+
+    transform:
+        rotate(360deg);
+
+}
+
+}
+
+/* ==========================
+HEADER
+========================== */
+
+.top-bar {
+
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 20px 40px;
+
+background:
+    rgba(0,0,0,0.65);
+
+backdrop-filter:
+    blur(20px);
+
+border-bottom:
+    1px solid rgba(255,215,0,0.3);
+
+
+}
+
+.logo {
+
+
+font-size: 2rem;
+
+font-weight: bold;
+
+color: gold;
+
+text-shadow:
+
+    0 0 10px gold,
+    0 0 20px gold,
+    0 0 40px gold;
+
+animation:
+    glowPulse 2s infinite;
+
+
+}
+
+.coin-box {
+
+
+color: gold;
+
+font-size: 1.2rem;
+
+font-weight: bold;
+
+
+}
+
+@keyframes glowPulse {
+
+
+50% {
+
+    text-shadow:
+
+        0 0 20px gold,
+        0 0 40px gold,
+        0 0 80px gold;
+
+}
+
+}
+
+/* ==========================
+MAIN TABLE
+========================== */
+
+.casino-table {
+
+
+flex: 1;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 25px;
+
+padding: 30px;
+
+
+}
+
+/* ==========================
+SECTIONS
+========================== */
+
+.dealer-area,
+.player-area {
+
+
+text-align: center;
+
+
+}
+
+.dealer-area h2,
+.player-area h2 {
+
+
+color: gold;
+
+font-size: 2rem;
+
+margin-bottom: 15px;
+
+
+}
+
+/* ==========================
+CARDS
+========================== */
+
+.cards-container {
+
+
+display: flex;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 15px;
+
+min-height: 150px;
+
+
+}
+
+.card {
+
+
+width: 100px;
+
+height: 145px;
+
+background:
+
+    linear-gradient(
+        145deg,
+        #ffffff,
+        #ececec
+    );
+
+border:
+    2px solid gold;
+
+border-radius:
+    14px;
+
+color: black;
+
+font-size: 1.8rem;
+
+font-weight: bold;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+box-shadow:
+
+    0 0 25px
+    rgba(255,215,0,0.35);
+
+transition: .3s;
+
+
+}
+
+.card:hover {
+
+transform:
+
+    translateY(-8px)
+    rotate(2deg);
+
+
+}
+
+/* ==========================
+SCORES
+========================== */
+
+.score-box {
+
+
+margin-top: 12px;
+
+color: gold;
+
+font-size: 1.2rem;
+
+font-weight: bold;
+
+
+}
+
+/* ==========================
+RESULT
+========================== */
+
+.center-panel {
+
+
+text-align: center;
+
+
+}
+
+#result-message {
+
+
+font-size: 2rem;
+
+font-weight: bold;
+
+color: gold;
+
+text-shadow:
+
+    0 0 10px gold,
+    0 0 20px gold;
+
+
+}
+
+/* ==========================
+COACH PANEL
+========================== */
+
+.coach-panel {
+
+
+width: 90%;
+
+max-width: 800px;
+
+padding: 25px;
+
+border-radius: 20px;
+
+background:
+
+    rgba(
+        255,
+        255,
+        255,
+        0.05
+    );
+
+backdrop-filter:
+    blur(20px);
+
+border:
+    1px solid rgba(
+        255,
+        215,
+        0,
+        .3
+    );
+
+box-shadow:
+
+    0 0 25px
+    rgba(
+        255,
+        215,
+        0,
+        .15
+    );
+
+
+}
+
+.coach-panel h2 {
+
+
+color: gold;
+
+margin-bottom: 15px;
+
+
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+button {
+
+
+border: none;
+
+border-radius: 12px;
+
+padding: 14px 28px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+color: black;
+
+background:
+
+    linear-gradient(
+        135deg,
+        #b8860b,
+        #ffd700
+    );
+
+transition: .3s;
+
+box-shadow:
+
+    0 0 15px
+    rgba(
+        255,
+        215,
+        0,
+        .4
+    );
+
+
+}
+
+button:hover {
+
+
+transform:
+
+    translateY(-4px);
+
+box-shadow:
+
+    0 0 35px
+    rgba(
+        255,
+        215,
+        0,
+        .8
+    );
+
+
+}
+
+.action-buttons {
+
+
+display: flex;
+
+gap: 15px;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+
+}
+
+/* ==========================
+TUTORIAL OVERLAY
+========================== */
+
+#tutorial-overlay {
+
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+background:
+    rgba(0,0,0,0.92);
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+z-index: 9999;
+
+
+}
+
+.tutorial-box {
+
+
+width: 700px;
+
+max-width: 90%;
+
+padding: 35px;
+
+text-align: center;
+
+border-radius: 20px;
+
+background:
+    rgba(255,255,255,0.05);
+
+backdrop-filter:
+    blur(20px);
+
+border:
+    1px solid rgba(
+        255,
+        215,
+        0,
+        .3
+    );
+
+box-shadow:
+    0 0 40px rgba(
+        255,
+        215,
+        0,
+        .25
+    );
+
+
+}
+
+.tutorial-box h1 {
+
+
+color: gold;
+
+margin-bottom: 20px;
+
+
+}
+
+.tutorial-box p {
+
+
+margin: 12px 0;
+
+line-height: 1.6;
+
+
+}
+
+/* ==========================
+PROFILE PAGE
+========================== */
+
+.profile-container {
+
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+padding: 50px;
+
+
+}
+
+.profile-card {
+
+
+width: 600px;
+
+max-width: 95%;
+
+padding: 35px;
+
+border-radius: 20px;
+
+text-align: center;
+
+background:
+    rgba(255,255,255,0.05);
+
+backdrop-filter:
+    blur(20px);
+
+border:
+    1px solid rgba(
+        255,
+        215,
+        0,
+        .3
+    );
+
+box-shadow:
+    0 0 30px rgba(
+        255,
+        215,
+        0,
+        .2
+    );
+
+
+}
+
+.profile-card h1 {
+
+
+color: gold;
+
+margin-bottom: 25px;
+
+
+}
+
+.profile-card p {
+
+
+margin: 12px 0;
+
+font-size: 1.1rem;
+
+
+}
+
+/* ==========================
+STATS PANEL
+========================== */
+
+.stats-panel {
+
+
+width: 90%;
+
+max-width: 1000px;
+
+margin: 30px auto;
+
+padding: 25px;
+
+border-radius: 20px;
+
+background:
+    rgba(255,255,255,0.05);
+
+backdrop-filter:
+    blur(20px);
+
+border:
+    1px solid rgba(
+        255,
+        215,
+        0,
+        .3
+    );
+
+
+}
+
+.stats-panel h2 {
+
+
+color: gold;
+
+text-align: center;
+
+margin-bottom: 20px;
+
+
+}
+
+.stats-grid {
+
+
+display: grid;
+
+grid-template-columns:
+    repeat(4,1fr);
+
+gap: 20px;
+
+text-align: center;
+
+
+}
+
+.stats-grid span {
+
+
+display: block;
+
+margin-top: 10px;
+
+color: gold;
+
+font-size: 1.4rem;
+
+font-weight: bold;
+
+
+}
+
+/* ==========================
+SHOP PAGE
+========================== */
+
+.shop-grid {
+
+
+width: 90%;
+
+max-width: 1200px;
+
+margin: 40px auto;
+
+display: grid;
+
+grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(
+            280px,
+            1fr
+        )
+    );
+
+gap: 25px;
+
+
+}
+
+.shop-item {
+
+
+padding: 25px;
+
+text-align: center;
+
+border-radius: 20px;
+
+background:
+    rgba(255,255,255,0.05);
+
+backdrop-filter:
+    blur(20px);
+
+border:
+    1px solid rgba(
+        255,
+        215,
+        0,
+        .25
+    );
+
+transition: .3s;
+
+
+}
+
+.shop-item:hover {
+
+
+transform:
+    translateY(-8px);
+
+box-shadow:
+    0 0 30px rgba(
+        255,
+        215,
+        0,
+        .35
+    );
+
+
+}
+
+.shop-item h3 {
+
+
+color: gold;
+
+margin-bottom: 15px;
+
+
+}
+
+.shop-item p {
+
+
+margin-bottom: 20px;
+
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+.footer-nav {
+
+
+display: flex;
+
+justify-content: center;
+
+gap: 20px;
+
+flex-wrap: wrap;
+
+padding: 20px;
+
+background:
+    rgba(0,0,0,0.7);
+
+backdrop-filter:
+    blur(15px);
+
+border-top:
+    1px solid rgba(
+        255,
+        215,
+        0,
+        .25
+    );
+
+
+}
+
+/* ==========================
+FLOATING WIN
+========================== */
+
+#floating-win {
+
+
+position: fixed;
+
+top: 50%;
+
+left: 50%;
+
+transform:
+    translate(-50%,-50%);
+
+color: gold;
+
+font-size: 3rem;
+
+font-weight: bold;
+
+opacity: 0;
+
+pointer-events: none;
+
+z-index: 99999;
+
+
+}
+
+.show-win {
+
+
+animation:
+    floatWin
+    2s ease;
+
+
+}
+
+@keyframes floatWin {
+
+
+from {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%,-50%)
+        translateY(0);
+
+}
+
+to {
+
+    opacity: 0;
+
+    transform:
+        translate(-50%,-50%)
+        translateY(-150px);
+
+}
+
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media (
+max-width: 768px
+) {
+
+
+.logo {
+
+    font-size: 1.3rem;
+
+}
+
+.card {
+
+    width: 75px;
+
+    height: 110px;
+
+    font-size: 1.2rem;
+
+}
+
+#result-message {
+
+    font-size: 1.4rem;
+
+}
+
+.stats-grid {
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+}
+
+.top-bar {
+
+    padding: 15px;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+}
+
